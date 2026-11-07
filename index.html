@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="حسابات وأدوات ومعلومات عملية للمواطن الجزائري: حساب الأجر، تحويل الوحدات، وحساب الأقساط.">
+<title>دليلك DZ | أدوات مفيدة للجزائريين</title>
+<style>
+:root{--bg:#f5f7f6;--card:#fff;--ink:#172522;--muted:#687873;--green:#087f5b;--green2:#e5f5ee;--line:#e3eae6;--accent:#f0b44b}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Tahoma,Arial,sans-serif;line-height:1.7}
+header{background:linear-gradient(120deg,#075b45,#0b9870);color:white;padding:22px 18px 38px}
+.wrap{max-width:1050px;margin:auto;padding:0 16px}.top{display:flex;justify-content:space-between;align-items:center;gap:12px}.logo{font-weight:900;font-size:23px}.logo span{color:#ffe2a4}.tag{font-size:13px;opacity:.9}
+.hero{padding:30px 0 8px}.hero h1{font-size:clamp(26px,5vw,42px);line-height:1.3;margin:0 0 10px}.hero p{margin:0;color:#e2f5ed;max-width:680px}
+.search{margin-top:22px;display:flex;gap:8px;max-width:600px}.search input{flex:1;min-width:0;padding:13px 15px;border:0;border-radius:12px;font:inherit}.search button,.btn{border:0;border-radius:12px;background:var(--accent);color:#30230a;font-weight:800;padding:12px 18px;font:inherit;cursor:pointer}
+main{padding:28px 0 60px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:10px;margin:0 0 14px}.section-head h2{font-size:22px;margin:0}.section-head small{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:0 5px 20px #163c2b08}.card h3{margin:5px 0;font-size:18px}.card p{margin:0;color:var(--muted);font-size:14px}.ico{width:42px;height:42px;border-radius:13px;background:var(--green2);display:grid;place-items:center;font-size:22px}
+.tool{margin-top:24px;display:grid;grid-template-columns:1.1fr .9fr;gap:16px}.panel{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px}.panel h2{margin:0 0 5px}.panel p{color:var(--muted);margin:0 0 15px;font-size:14px}
+label{display:block;font-size:14px;font-weight:700;margin:10px 0 5px}input,select{width:100%;padding:12px;border:1px solid var(--line);border-radius:10px;font:inherit;background:#fff}button.primary{background:var(--green);color:#fff;border:0;border-radius:10px;padding:11px 17px;font:inherit;font-weight:700;margin-top:12px;cursor:pointer}.result{background:var(--green2);border-radius:12px;padding:14px;margin-top:14px;min-height:54px;font-weight:700}
+.ad{border:1px dashed #b8c8c0;border-radius:14px;min-height:115px;display:grid;place-items:center;text-align:center;color:#718078;background:#fbfdfc;padding:16px;font-size:13px}
+.notice{font-size:12px;color:var(--muted);margin-top:10px}.links{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}.links a{color:var(--green);text-decoration:none;font-weight:700;font-size:14px}
+footer{background:#102d25;color:#d8e9e2;padding:28px 0;font-size:13px}footer a{color:#a9e5ce}
+.hidden{display:none!important}
+@media(max-width:760px){.grid{grid-template-columns:1fr 1fr}.tool{grid-template-columns:1fr}.top{align-items:flex-start;flex-direction:column}}
+@media(max-width:480px){.grid{grid-template-columns:1fr}.search{flex-direction:column}.search button{width:100%}}
+</style>
+</head>
+<body>
+<header>
+ <div class="wrap">
+  <div class="top"><div class="logo">دليلك <span>DZ</span></div><div class="tag">معلومات وأدوات عملية للجزائريين</div></div>
+  <div class="hero">
+   <h1>كل ما تحتاجه… في مكان واحد</h1>
+   <p>أدوات حساب بسيطة ومعلومات واضحة تساعدك في أمورك اليومية في الجزائر. الموقع في نسخته التجريبية الأولى.</p>
+   <div class="search"><input id="search" placeholder="ابحث عن أداة أو موضوع..." aria-label="ابحث"><button onclick="searchCards()">ابحث</button></div>
+  </div>
+ </div>
+</header>
+<main class="wrap">
+ <div class="section-head"><h2>أدوات مفيدة</h2><small>اختر الأداة وجرّبها مباشرة</small></div>
+ <div class="grid" id="cards">
+  <article class="card" data-terms="راتب أجرة salaire حساب الدخل"><div class="ico">💰</div><h3>حاسبة متوسط الأجر</h3><p>احسب متوسط دخلك لعدة أشهر بالدينار الجزائري.</p></article>
+  <article class="card" data-terms="قسط سكن lpa aadl دفعة"><div class="ico">🏠</div><h3>حاسبة أقساط السكن</h3><p>قسّم سعر السكن إلى نسب دفع مختلفة.</p></article>
+  <article class="card" data-terms="تحويل وحدات طول وزن مساحة"><div class="ico">📏</div><h3>تحويل الوحدات</h3><p>حوّل بين المتر والسنتيمتر والكيلومتر.</p></article>
+ </div>
+ <div class="tool">
+  <section class="panel">
+   <h2>حاسبة متوسط الأجر</h2><p>أدخل المبالغ بالمليون سنتيم أو بالدينار؛ النتيجة تُعرض بالمليون سنتيم.</p>
+   <label for="salary1">الشهر الأول (مليون سنتيم)</label><input id="salary1" type="number" min="0" step=".01" placeholder="مثال: 12.5">
+   <label for="salary2">الشهر الثاني</label><input id="salary2" type="number" min="0" step=".01" placeholder="مثال: 11.8">
+   <label for="salary3">الشهر الثالث</label><input id="salary3" type="number" min="0" step=".01" placeholder="مثال: 13">
+   <button class="primary" onclick="averageSalary()">احسب المتوسط</button>
+   <div class="result" id="salaryResult" aria-live="polite">النتيجة تظهر هنا.</div>
+   <div class="notice">هذه حاسبة حسابية فقط، ولا تحدد الأجر القانوني أو أهلية الاستفادة من أي صيغة سكن.</div>
+  </section>
+  <section class="panel">
+   <h2>حاسبة أقساط السكن</h2><p>أدخل السعر بالمليون سنتيم، ثم احسب الأقساط وفق النسب الافتراضية أدناه.</p>
+   <label for="price">السعر (مليون سنتيم)</label><input id="price" type="number" min="0" step=".1" value="350">
+   <label>نسب الدفع</label>
+   <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:6px">
+    <input id="p1" type="number" value="20" aria-label="النسبة الأولى"><input id="p2" type="number" value="15" aria-label="النسبة الثانية"><input id="p3" type="number" value="35" aria-label="النسبة الثالثة"><input id="p4" type="number" value="25" aria-label="النسبة الرابعة"><input id="p5" type="number" value="5" aria-label="النسبة الخامسة">
+   </div>
+   <button class="primary" onclick="installments()">احسب الأقساط</button>
+   <div class="result" id="installmentResult" aria-live="polite">20% · 15% · 35% · 25% · 5%</div>
+   <div class="notice">النسب قابلة للتعديل. تحقق من جدول الدفع الرسمي الخاص ببرنامجك قبل التسديد.</div>
+  </section>
+ </div>
+ <div class="panel" style="margin-top:16px">
+  <div class="section-head"><h2>مساحة إعلانية</h2><small>تُفعّل بعد قبول الموقع في شبكة إعلانية</small></div>
+  <div class="ad">مكان مخصص للإعلانات<br>لا توجد إعلانات فعلية في النسخة التجريبية.</div>
+ </div>
+ <div class="links"><a href="#about">من نحن</a><a href="#privacy">سياسة الخصوصية</a><a href="mailto:contact@example.com">اتصل بنا</a></div>
+</main>
+<footer><div class="wrap"><div id="about"><strong>دليلك DZ</strong> — مشروع مستقل لتقديم أدوات ومعلومات عامة.</div><p id="privacy">نحترم خصوصيتك. عند إضافة خدمات تحليل الزيارات أو الإعلانات سنحدّث سياسة الخصوصية ونوضح ملفات تعريف الارتباط المستخدمة.</p><p>المحتوى للتوعية والمساعدة العامة، وليس بديلاً عن الجهات الرسمية أو الاستشارة المختصة. © 2026 دليلك DZ</p></div></footer>
+<script>
+function averageSalary(){
+ const vals=[1,2,3].map(i=>Number(document.getElementById('salary'+i).value));
+ if(vals.some(v=>!Number.isFinite(v)||v<0)||vals.every(v=>v===0)){document.getElementById('salaryResult').textContent='أدخل مبالغ صحيحة للشهور الثلاثة.';return;}
+ const avg=vals.reduce((a,b)=>a+b,0)/3;
+ document.getElementById('salaryResult').textContent='متوسط الأجر: '+avg.toFixed(2)+' مليون سنتيم ('+(avg*10000).toLocaleString('fr-DZ')+' دج تقريباً).';
+}
+function installments(){
+ const price=Number(document.getElementById('price').value), ps=[1,2,3,4,5].map(i=>Number(document.getElementById('p'+i).value));
+ const total=ps.reduce((a,b)=>a+b,0), out=document.getElementById('installmentResult');
+ if(!(price>0)||ps.some(v=>v<0)||Math.abs(total-100)>.001){out.textContent='تحقق من السعر: يجب أن يكون مجموع النسب 100%.';return;}
+ out.innerHTML=ps.map((v,i)=>`الدفعة ${i+1} (${v}%): ${(price*v/100).toFixed(2)} مليون سنتيم`).join('<br>');
+}
+function searchCards(){
+ const q=document.getElementById('search').value.trim().toLowerCase();
+ document.querySelectorAll('#cards .card').forEach(c=>c.classList.toggle('hidden',q&&!((c.innerText+' '+c.dataset.terms).toLowerCase().includes(q))));
+}
+</script>
+</body></html>
