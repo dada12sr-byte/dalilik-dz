@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="دليلك DZ: أدوات حساب مجانية ومصادر رسمية للتوظيف والخدمات اليومية في الجزائر.">
+<meta name="theme-color" content="#087f5b">
+<title>دليلك DZ | أدوات وخدمات للجزائريين</title>
+<style>
+:root{--bg:#f4f7f5;--card:#fff;--ink:#172522;--muted:#687873;--green:#087f5b;--green2:#e5f5ee;--line:#e0e9e4;--gold:#f0b44b}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Tahoma,Arial,sans-serif;line-height:1.75}
+.wrap{max-width:1050px;margin:auto;padding:0 16px}header{background:linear-gradient(120deg,#075b45,#0b9870);color:#fff;padding:22px 0 42px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px}.logo{font-size:24px;font-weight:900}.logo span{color:#ffe2a4}.tag{font-size:13px;opacity:.9}
+nav{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}nav a{color:#e9fff5;text-decoration:none;padding:7px 11px;border:1px solid #ffffff40;border-radius:20px;font-size:13px}
+.hero{padding:28px 0 4px}.hero h1{font-size:clamp(27px,5vw,42px);line-height:1.35;margin:0 0 10px}.hero p{margin:0;color:#e2f5ed;max-width:700px}
+.search{margin-top:22px;display:flex;gap:8px;max-width:650px}.search input{flex:1;min-width:0;padding:13px 15px;border:0;border-radius:12px;font:inherit}.search button,.btn{border:0;border-radius:12px;background:var(--gold);color:#30230a;font-weight:800;padding:12px 18px;font:inherit;cursor:pointer}
+main{padding:28px 0 60px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:10px;margin:0 0 14px}.section-head h2{font-size:22px;margin:0}.section-head small{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:0 5px 20px #163c2b08}.card h3{margin:5px 0;font-size:18px}.card p{margin:0;color:var(--muted);font-size:14px}.ico{width:42px;height:42px;border-radius:13px;background:var(--green2);display:grid;place-items:center;font-size:22px}
+.panel{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px}.panel h2{margin:0 0 5px}.panel>p{color:var(--muted);margin:0 0 15px;font-size:14px}.tools{margin-top:24px;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+label{display:block;font-size:14px;font-weight:700;margin:10px 0 5px}input,select{width:100%;padding:12px;border:1px solid var(--line);border-radius:10px;font:inherit;background:#fff}
+button.primary{background:var(--green);color:#fff;border:0;border-radius:10px;padding:11px 17px;font:inherit;font-weight:700;margin-top:12px;cursor:pointer}
+.result{background:var(--green2);border-radius:12px;padding:14px;margin-top:14px;min-height:54px;font-weight:700}.notice{font-size:12px;color:var(--muted);margin-top:10px}
+.rates{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.jobgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.job a{color:var(--green);font-weight:800;text-decoration:none;display:inline-block;margin-top:10px}
+.ad{border:1px dashed #b8c8c0;border-radius:14px;min-height:100px;display:grid;place-items:center;text-align:center;color:#718078;background:#fbfdfc;padding:16px;font-size:13px}
+.links{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}.links a{color:var(--green);text-decoration:none;font-weight:700;font-size:14px}footer{background:#102d25;color:#d8e9e2;padding:28px 0;font-size:13px}footer a{color:#a9e5ce}.hidden{display:none!important}
+@media(max-width:760px){.grid,.jobgrid{grid-template-columns:1fr 1fr}.tools{grid-template-columns:1fr}.top{align-items:flex-start;flex-direction:column}}
+@media(max-width:480px){.grid,.jobgrid{grid-template-columns:1fr}.search{flex-direction:column}.search button{width:100%}.rates{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+ <div class="top"><div class="logo">دليلك <span>DZ</span></div><div class="tag">معلومات وأدوات عملية للجزائريين</div></div>
+ <nav><a href="#tools">الأدوات</a><a href="#jobs">التوظيف</a><a href="#about">من نحن</a></nav>
+ <div class="hero"><h1>كل ما تحتاجه… في مكان واحد</h1>
+ <p>أدوات حساب مجانية وروابط مفيدة تساعدك في أمورك اليومية في الجزائر.</p>
+ <div class="search"><input id="search" placeholder="ابحث عن أداة أو موضوع..." aria-label="ابحث"><button onclick="searchCards()">ابحث</button></div></div>
+</div></header>
+<main class="wrap">
+ <section id="tools"><div class="section-head"><h2>أدوات مفيدة</h2><small>اختر الأداة وجرّبها مباشرة</small></div>
+ <div class="grid" id="cards">
+  <article class="card" data-terms="راتب أجرة salaire حساب الدخل"><div class="ico">💰</div><h3>حاسبة متوسط الأجر</h3><p>احسب متوسط دخلك لعدة أشهر بالمليون سنتيم.</p></article>
+  <article class="card" data-terms="قسط سكن lpa aadl دفعة"><div class="ico">🏠</div><h3>حاسبة أقساط السكن</h3><p>قسّم سعر السكن إلى نسب دفع مختلفة.</p></article>
+  <article class="card" data-terms="تحويل وحدات طول وزن مساحة"><div class="ico">📏</div><h3>تحويل الوحدات</h3><p>حوّل بين المتر والسنتيمتر والكيلومتر.</p></article>
+  <article class="card" data-terms="عملة يورو دولار جنيه صرف dinar euro usd"><div class="ico">💱</div><h3>محول العملات</h3><p>حوّل العملات إلى الدينار الجزائري باستعمال سعر صرف تدخله بنفسك.</p></article>
+ </div>
+ <div class="tools">
+  <section class="panel"><h2>حاسبة متوسط الأجر</h2><p>أدخل المبالغ بالمليون سنتيم؛ النتيجة تظهر بالمليون سنتيم والدينار.</p>
+   <label for="salary1">الشهر الأول</label><input id="salary1" type="number" min="0" step=".01" placeholder="مثال: 12.5">
+   <label for="salary2">الشهر الثاني</label><input id="salary2" type="number" min="0" step=".01" placeholder="مثال: 11.8">
+   <label for="salary3">الشهر الثالث</label><input id="salary3" type="number" min="0" step=".01" placeholder="مثال: 13">
+   <button class="primary" onclick="averageSalary()">احسب المتوسط</button><div class="result" id="salaryResult" aria-live="polite">النتيجة تظهر هنا.</div>
+   <div class="notice">هذه حاسبة حسابية فقط، ولا تحدد الأجر القانوني أو أهلية الاستفادة من أي صيغة.</div>
+  </section>
+  <section class="panel"><h2>حاسبة أقساط السكن</h2><p>أدخل السعر بالمليون سنتيم. مجموع نسب الدفع يجب أن يساوي 100%.</p>
+   <label for="price">السعر (مليون سنتيم)</label><input id="price" type="number" min="0" step=".1" value="350">
+   <label>نسب الدفع (%)</label><div class="rates">
+    <input id="p1" type="number" value="20" aria-label="النسبة الأولى"><input id="p2" type="number" value="15" aria-label="النسبة الثانية"><input id="p3" type="number" value="35" aria-label="النسبة الثالثة"><input id="p4" type="number" value="25" aria-label="النسبة الرابعة"><input id="p5" type="number" value="5" aria-label="النسبة الخامسة">
+   </div><button class="primary" onclick="installments()">احسب الأقساط</button><div class="result" id="installmentResult" aria-live="polite">20% · 15% · 35% · 25% · 5%</div>
+   <div class="notice">النسب افتراضية وقابلة للتعديل. تحقق من جدول الدفع الرسمي قبل التسديد.</div>
+  </section>
+  <section class="panel"><h2>محول العملات إلى الدينار</h2><p>أدخل سعر الوحدة الواحدة بالدينار حسب المصدر الذي تثق به، ثم حوّل المبلغ. لا توجد أسعار مباشرة مدمجة حالياً.</p>
+   <label for="currency">العملة</label><select id="currency"><option value="EUR">يورو (EUR)</option><option value="USD">دولار أمريكي (USD)</option><option value="GBP">جنيه إسترليني (GBP)</option></select>
+   <label for="amount">المبلغ بالعملة المختارة</label><input id="amount" type="number" min="0" step=".01" value="100">
+   <label for="rate">سعر الوحدة بالدينار الجزائري (DZD)</label><input id="rate" type="number" min="0" step=".01" placeholder="أدخل سعر الصرف">
+   <button class="primary" onclick="convertCurrency()">حوّل إلى DZD</button><div class="result" id="currencyResult" aria-live="polite">أدخل سعر الصرف ثم اضغط على تحويل.</div>
+   <div class="notice">أسعار الصرف تختلف حسب المصدر والسوق والتاريخ. هذه الأداة لا تجلب الأسعار تلقائياً ولا تمثل سعراً رسمياً.</div>
+  </section>
+  <section class="panel"><h2>تحويل الوحدات</h2><p>تحويل سريع لوحدات الطول.</p>
+   <label for="lengthValue">القيمة</label><input id="lengthValue" type="number" min="0" step="any" value="1">
+   <label for="unitFrom">من</label><select id="unitFrom"><option value="m">متر</option><option value="cm">سنتيمتر</option><option value="km">كيلومتر</option></select>
+   <label for="unitTo">إلى</label><select id="unitTo"><option value="cm">سنتيمتر</option><option value="m">متر</option><option value="km">كيلومتر</option></select>
+   <button class="primary" onclick="convertLength()">حوّل</button><div class="result" id="lengthResult">النتيجة تظهر هنا.</div>
+  </section>
+ </div></section>
+ <section id="jobs" style="margin-top:30px"><div class="section-head"><h2>دليل التوظيف في الجزائر</h2><small>روابط مباشرة للمصادر الرسمية</small></div>
+  <div class="jobgrid">
+   <article class="panel job"><div class="ico">🏛️</div><h3>مسابقات الوظيفة العمومية</h3><p>ابحث عن إعلانات مسابقات الإدارات والمؤسسات العمومية، وتحقق من الشروط والآجال في الإعلان الأصلي.</p><a href="https://www.concours-fonction-publique.gov.dz/" target="_blank" rel="noopener">زيارة بوابة الوظيف العمومي ↗</a></article>
+   <article class="panel job"><div class="ico">👷</div><h3>الوكالة الوطنية للتشغيل</h3><p>تابع خدمات الوكالة وعروض العمل عبر منصاتها الرقمية الرسمية.</p><a href="https://www.anem.dz/" target="_blank" rel="noopener">زيارة موقع ANEM ↗</a></article>
+   <article class="panel job"><div class="ico">📚</div><h3>توظيف وزارة التربية</h3><p>تابع إعلانات ومسابقات التوظيف المنشورة عبر الموقع الرسمي لوزارة التربية الوطنية.</p><a href="https://www.education.gov.dz/" target="_blank" rel="noopener">زيارة موقع الوزارة ↗</a></article>
+  </div>
+  <div class="notice">هذه روابط مرجعية وليست قائمة بمناصب مفتوحة حالياً. تحقق دائماً من الإعلان الرسمي والآجال قبل إرسال ملفك.</div>
+ </section>
+ <section class="panel" style="margin-top:20px"><div class="section-head"><h2>مساحة إعلانية</h2><small>تُفعّل بعد قبول الموقع في شبكة إعلانية</small></div><div class="ad">مكان مخصص للإعلانات<br>لا توجد إعلانات فعلية في هذه النسخة.</div></section>
+ <div class="links"><a href="#about">من نحن</a><a href="#privacy">سياسة الخصوصية</a><a href="mailto:contact@example.com">اتصل بنا</a></div>
+</main>
+<footer><div class="wrap"><div id="about"><strong>دليلك DZ</strong> — مشروع مستقل لتقديم أدوات ومعلومات عامة.</div>
+ <p id="privacy">نحترم خصوصيتك. عند إضافة خدمات تحليل الزيارات أو الإعلانات سنحدّث سياسة الخصوصية ونوضح ملفات تعريف الارتباط المستخدمة.</p>
+ <p>المحتوى للتوعية والمساعدة العامة، وليس بديلاً عن الجهات الرسمية أو الاستشارة المختصة. © 2026 دليلك DZ</p></div></footer>
+<script>
+function averageSalary(){const vals=[1,2,3].map(i=>Number(document.getElementById('salary'+i).value));const out=document.getElementById('salaryResult');if(vals.some(v=>!Number.isFinite(v)||v<0)||vals.every(v=>v===0)){out.textContent='أدخل مبالغ صحيحة للشهور الثلاثة.';return;}const avg=vals.reduce((a,b)=>a+b,0)/3;out.textContent='متوسط الأجر: '+avg.toFixed(2)+' مليون سنتيم ('+(avg*10000).toLocaleString('fr-DZ')+' دج تقريباً).';}
+function installments(){const price=Number(document.getElementById('price').value),ps=[1,2,3,4,5].map(i=>Number(document.getElementById('p'+i).value)),total=ps.reduce((a,b)=>a+b,0),out=document.getElementById('installmentResult');if(!(price>0)||ps.some(v=>v<0)||Math.abs(total-100)>.001){out.textContent='تحقق من السعر: يجب أن يكون مجموع النسب 100%.';return;}out.innerHTML=ps.map((v,i)=>`الدفعة ${i+1} (${v}%): ${(price*v/100).toFixed(2)} مليون سنتيم`).join('<br>');}
+function convertCurrency(){const amount=Number(document.getElementById('amount').value),rate=Number(document.getElementById('rate').value),currency=document.getElementById('currency').value,out=document.getElementById('currencyResult');if(!(amount>=0)||!(rate>0)){out.textContent='أدخل مبلغاً وسعر صرف صحيحين.';return;}out.textContent=amount.toLocaleString('fr-FR')+' '+currency+' = '+(amount*rate).toLocaleString('fr-FR',{maximumFractionDigits:2})+' DZD';}
+function convertLength(){const factors={m:1,cm:.01,km:1000},v=Number(document.getElementById('lengthValue').value),from=document.getElementById('unitFrom').value,to=document.getElementById('unitTo').value;document.getElementById('lengthResult').textContent=Number.isFinite(v)?(v*factors[from]/factors[to]).toLocaleString('fr-FR')+' '+to:'أدخل قيمة صحيحة.';}
+function searchCards(){const q=document.getElementById('search').value.trim().toLowerCase();document.querySelectorAll('#cards .card').forEach(c=>c.classList.toggle('hidden',q&&!((c.innerText+' '+c.dataset.terms).toLowerCase().includes(q))));}
+</script>
+</body></html>
